@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Dicas de Produtos</h1>
+
+  <nav>
+    <a href="./index.html">Catálogo</a>
+    <a href="./menu1.html">História</a>
+    <a href="./menu2.html">Fale com a gente</a>
+    <a href="./menu3.html">Dicas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="caixa">
+    <h2>Dicas para a Copa</h2>
+
+    <div class="dica">
+      <h3>Camisas</h3>
+      <p>As camisas são ótimas para torcer durante os jogos.</p>
+      <button onclick="mostrarDica('Camisas deixam a torcida mais estilosa!')">Ver dica</button>
+    </div>
+
+    <div class="dica">
+      <h3>Bonés</h3>
+      <p>Bonés combinam muito com eventos da Copa.</p>
+      <button onclick="mostrarDica('Bonés ajudam a completar o visual!')">Ver dica</button>
+    </div>
+
+    <div class="dica">
+      <h3>Acessórios</h3>
+      <p>Bandeiras, copos e cachecóis deixam a torcida mais animada.</p>
+      <button onclick="mostrarDica('Acessórios deixam sua torcida mais completa!')">Ver dica</button>
+    </div>
+
+    <p id="textoDica"></p>
+
+    <button onclick="voltarInicio()">Voltar para o catálogo</button>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 BM Copa Store</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

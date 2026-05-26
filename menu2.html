@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale com a gente</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Fale com a gente</h1>
+
+  <nav>
+    <a href="./index.html">Catálogo</a>
+    <a href="./menu1.html">História</a>
+    <a href="./menu2.html">Fale com a gente</a>
+    <a href="./menu3.html">Dicas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="formulario">
+    <h2>Contato</h2>
+
+    <input type="text" id="nomeContato" placeholder="Nome">
+    <input type="email" id="emailContato" placeholder="Email">
+    <textarea id="mensagemContato" placeholder="Mensagem"></textarea>
+
+    <button onclick="enviarContato()">Enviar mensagem</button>
+    <button onclick="limparContato()" class="btn-vermelho">Limpar</button>
+
+    <p id="respostaContato"></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 BM Copa Store</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

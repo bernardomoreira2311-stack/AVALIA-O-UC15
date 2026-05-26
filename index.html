@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BM Copa Store 2026</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>BM Copa Store 2026</h1>
+
+  <nav> 
+    <a href="./index.html">Catálogo</a>
+    <a href="./menu1.html">História</a>
+    <a href="./menu2.html">Fale com a gente</a>
+    <a href="./menu3.html">Dicas</a>
+      <button id="abrirCarrinhoBtn" onclick="abrirCarrinho()">Abrir Carrinho</button>
+
+ <section class="carrossel">
+    <div class="carrossel-container">
+      <button class="carrossel-btn esquerda" id="prevBtn" aria-label="Slide anterior">&#10094;</button>
+      <img id="imagemCarrossel" src="assets/img/banner da copa 2.jpg" alt="Promoção Copa 2026">
+      <button class="carrossel-btn direita" id="nextBtn" aria-label="Próximo slide">&#10095;</button>
+    </div>
+    <div class="carrossel-indicadores" id="indicadoresCarrossel"></div>
+  </section>
+
+  <section class="filtros">
+    <input type="text" id="pesquisa" placeholder="Pesquisar produto...">
+
+    <select id="filtroCategoria">
+      <option value="Todos">Todas as categorias</option>
+      <option value="Camisas">Camisas</option>
+      <option value="Acessórios">Acessórios</option>
+      <option value="Bonés">Bonés</option>
+      <option value="Chuteiras">Chuteiras</option>
+      <option value="Outros">Outros</option>
+    </select>
+
+    <button onclick="limparFiltros()">Limpar filtros</button>
+  </section>
+
+  <section>
+    <h2 class="titulo">Catálogo</h2>
+    <div id="listaProdutos" class="produtos"></div>
+  </section>
+
+  <section>
+    <h2 class="titulo">Carrinho</h2>
+    <p>O carrinho aparecerá no canto superior direito assim que você adicionar algum produto.</p>
+  </section>
+
+</main>
+
+<div id="carrinho">
+  <button type="button" class="fechar-carrinho" onclick="fecharCarrinho()">×</button>
+  <h2>Carrinho</h2>
+  <ul id="lista-carrinho"></ul>
+  <p id="total-carrinho">Total: R$ 0,00</p>
+
+  <div class="pagamento-cartao" id="pagamentoSection">
+    <h3>Pagamento via PayPal</h3>
+    <p>Escolha a bandeira do cartão e se é crédito ou débito. O pagamento será processado pelo PayPal.</p>
+
+    <select id="bandeiraCartao">
+      <option value="Visa">Visa</option>
+      <option value="Mastercard">Mastercard</option>
+      <option value="American Express">American Express</option>
+      <option value="Elo">Elo</option>
+      <option value="Hipercard">Hipercard</option>
+      <option value="Diners Club">Diners Club</option>
+      <option value="Discover">Discover</option>
+    </select>
+
+    <div class="tipo-cartao">
+      <button type="button" id="btnCredito" class="btn-cartao ativo" onclick="selecionarTipoCartao('Crédito')">Crédito</button>
+      <button type="button" id="btnDebito" class="btn-cartao" onclick="selecionarTipoCartao('Débito')">Débito</button>
+    </div>
+    <input type="hidden" id="tipoCartao" value="Crédito">
+
+    <input type="text" id="nomeCartao" placeholder="Nome no cartão" required>
+    <input type="text" id="numeroCartao" placeholder="Número do cartão" required>
+    <div class="linha-pagamento">
+      <input type="text" id="validadeCartao" placeholder="Validade (MM/AA)" required>
+      <input type="text" id="cvvCartao" placeholder="CVV" required>
+    </div>
+
+    <input type="email" id="emailPaypal" placeholder="E-mail PayPal" required>
+
+    <button onclick="processarPagamento()" class="btn-vermelho" id="btnPagar">Pagar com PayPal</button>
+  </div>
+
+  <button onclick="limparCarrinho()" class="btn-vermelho">Limpar carrinho</button>
+</div>
+
+<footer>
+  <p>&copy; 2026 BM Copa Store - Todos os direitos reservados.</p>
+</footer>
+
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

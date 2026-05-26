@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Cadastro de Produtos</h1>
+
+  <nav>
+    <a href="./index.html">Catálogo</a>
+    <a href="./menu1.html">História</a>
+    <a href="./menu2.html">Fale com a gente</a>
+    <a href="./menu3.html">Dicas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="formulario">
+    <h2>Cadastrar Produto</h2>
+
+    <input type="text" id="nomeCadastro" placeholder="Nome do produto">
+    <input type="text" id="descricaoCadastro" placeholder="Descrição">
+    <input type="number" id="precoCadastro" placeholder="Preço">
+
+    <select id="categoriaCadastro">
+      <option value="Camisas">Camisas</option>
+      <option value="Acessórios">Acessórios</option>
+      <option value="Bonés">Bonés</option>
+      <option value="Chuteiras">Chuteiras</option>
+      <option value="Outros">Outros</option>
+    </select>
+
+    <input type="text" id="tamanhoCadastro" placeholder="Tamanho">
+    <input type="text" id="corCadastro" placeholder="Cor">
+    <input type="number" id="quantidadeCadastro" placeholder="Quantidade">
+    <input type="text" id="imagemCadastro" placeholder="Nome da imagem. Ex: camisa.jpg">
+
+    <button onclick="cadastrarProduto()">Cadastrar</button>
+    <button onclick="limparCadastro()" class="btn-vermelho">Limpar</button>
+    <button onclick="limparProdutosCadastrados()" class="btn-vermelho">Limpar produtos cadastrados</button>
+
+    <p id="mensagemCadastro"></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 BM Copa Store</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
